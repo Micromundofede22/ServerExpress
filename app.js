@@ -4,7 +4,7 @@ import ProductManager from "./ProductManager.js"
 const manager= new ProductManager("../Productos.json")
 
 const app= express()
-
+app.use(express.urlencoded({extended:true}))
 
 app.get("/products", async(req, res)=>{
     let limite = req.query.limite
