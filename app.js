@@ -1,18 +1,18 @@
 import express from "express";
 import ProductManager from "./ProductManager.js"
 
-const manager= new ProductManager("./Productos.json")
+const manager= new ProductManager("../Productos.json")
 
 const app= express()
 
 
 app.get("/products", async(req, res)=>{
     let limite = req.query.limite
-    const productLimitados = await manager.getProducts()
+    const productLimitados = await manager.getProduct()
 
     const prueba = productLimitados.filter(producto => producto.id <= Number(limite))
   
-    if(!limite) res.send(await manager.getProducts())
+    if(!limite) res.send(await manager.getProduct())
     else{
          res.send(prueba)
     }
