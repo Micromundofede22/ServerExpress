@@ -1,7 +1,7 @@
 import fs from "fs"
 
 
-class ProductManager {
+export class ProductManager {
     constructor(path) {
         this.path = path,
             this.formato = "utf-8"
@@ -65,11 +65,11 @@ class ProductManager {
 }
 
 const productoConstruido = new ProductManager("./Productos.json")
-await productoConstruido.addProduct("Berlín", "terrario abierto", 3500, 12, 20, "http")
-await productoConstruido.addProduct("París", "terrario abierto", 8500, 16, 20, "http")
-await productoConstruido.addProduct("Ámsterdam", "terrario abierto", 9000, 16, 20, "http")
-await productoConstruido.addProduct("Argentina", "terrario abierto", 9000, 16, 20, "http")
-productoConstruido.getProduct()
-productoConstruido.getProductById(2)
-await productoConstruido.updateProduct(2, "title", "Fancia")
-await productoConstruido.deleteProduct(3)
+// await productoConstruido.addProduct("Berlín", "terrario abierto", 3500, 12, 20, "http")
+// await productoConstruido.addProduct("París", "terrario abierto", 8500, 16, 20, "http")
+// await productoConstruido.addProduct("Ámsterdam", "terrario abierto", 9000, 16, 20, "http")
+// await productoConstruido.addProduct("Argentina", "terrario abierto", 9000, 16, 20, "http")
+// productoConstruido.getProduct()
+// productoConstruido.getProductById(2)
+// await productoConstruido.updateProduct(2, "title", "Fancia")
+// await productoConstruido.deleteProduct(3)

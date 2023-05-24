@@ -1,7 +1,7 @@
 import express from "express";
-import ProductManager from "./ProductManager.js"
+import {ProductManager} from "./ProductManager.js"
 
-const manager= new ProductManager("../Productos.json")
+const manager= new ProductManager("./Productos.json")
 
 const app= express()
 app.use(express.urlencoded({extended:true}))
